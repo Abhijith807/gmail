@@ -1,0 +1,426 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.whole {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #e4eef3;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.sidebar {
+  width: 220px;
+  background: #e4eef3;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 101;
+}
+
+.logobar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.menuicon {
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.menuicon:hover {
+  background-color: #bbbb;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+}
+
+.compose-btn, .upgrade-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.compose-btn {
+  background-color: rgb(180, 227, 251);
+}
+
+.compose-btn:hover {
+  background-color: rgb(159, 218, 248);
+}
+
+.upgrade-btn {
+  background-color: rgb(255, 255, 255);
+  gap: 10px;
+  padding: 8px 35px;
+  font-size: 15px;
+}
+
+.upgrade-btn:hover {
+  background-color: #bbbbbb;
+}
+
+.upgrade-icon, .compose-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.sidebar-links {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.link:hover {
+  background-color: #bbbbbb;
+}
+
+.link.active {
+  font-weight: bold;
+}
+
+.sidebar-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.sidebar-icon:hover {
+  background-color: #bbbbbb;
+}
+
+.hdsearch {
+  position: fixed;
+  top: 0px;
+  left: 220px;
+  width: calc(100% - 220px);
+  background-color: #e4eef3;
+  z-index: 100;
+}
+
+.oncntr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.search-wraper {
+  flex: 1;
+}
+
+.subsrch {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 6px 12px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.search, .searchb {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.search {
+  margin-right: 8px;
+}
+
+.search:hover {
+  background-color: #bbbbbb;
+}
+
+.searchb {
+  margin-left: 8px;
+}
+
+.searchb:hover {
+  background-color: #bbbbbb;
+}
+
+.searchbox {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.email-toolbar {
+  position: fixed;
+  top: 70px;
+  left: 220px;
+  width: calc(100% - 220px);
+  background: #ffffff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  gap: 16px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  z-index: 99;
+}
+
+.toolbar-item {
+  cursor: pointer;
+}
+
+.toolbar-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.toolbar-icon:hover {
+  background-color: #bbbbbb;
+}
+
+.toolbar-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: #444;
+}
+
+.tab-row {
+  position: fixed;
+  top: 110px;
+  left: 220px;
+  width: calc(100% - 220px);
+  background: #fff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  gap: 300px;
+  z-index: 98;
+}
+
+.tab-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.tab-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.tab-item:hover {
+  background-color: #bbbbbb;
+}
+
+.main-content {
+  margin-top: 145px;
+  margin-left: 220px;
+  background-color: #fff;
+  box-sizing: border-box;
+  height: calc(100vh - 168px);
+  padding: 0 20px;
+  overflow-y: auto;
+  position: fixed;
+  top: 1px;
+  width: calc(100% - 220px);
+  z-index: 1;
+}
+
+.sidebar-icon1 {
+  width: 20px;
+  height: 20px;
+  align-items: end;
+}
+
+.email-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.email-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  color: #222;
+}
+
+.sender {
+  flex: 0 0 150px;
+  font-weight: 500;
+}
+
+.subject {
+  flex: 1;
+  margin: 0 10px;
+  color: #555;
+}
+
+.date {
+  flex: 0 0 60px;
+  text-align: right;
+  color: #999;
+}
+
+.mail-check {
+  cursor: pointer;
+}
+
+.mail-check:hover {
+  background-color: #bbbbbb;
+}
+
+@media (max-width: 1400px) {
+  .tab-row {
+    gap: 200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .tab-row {
+    gap: 120px;
+  }
+}
+
+@media (max-width: 992px) {
+  .sidebar {
+    width: 72px;
+    padding: 10px;
+  }
+
+  .title,
+  .link span,
+  .compose-btn span,
+  .upgrade-btn span {
+    display: none;
+  }
+
+  .compose-btn,
+  .upgrade-btn {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .tab-row,
+  .email-toolbar,
+  .main-content,
+  .hdsearch {
+    position: relative;
+    left: 72px;
+    width: calc(100% - 72px);
+    margin-left: 0;
+  }
+
+  .tab-row {
+    top: auto;
+    gap: 12px;
+    justify-content: space-around;
+    padding: 10px 16px;
+  }
+
+  .email-toolbar {
+    top: auto;
+    padding: 10px 16px;
+  }
+
+  .main-content {
+    margin-top: 0;
+    padding: 0 16px;
+    height: calc(100vh - 168px);
+    overflow-y: auto;
+  }
+
+  .tab-item span {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .whole {
+    flex-direction: column;
+  }
+
+  .tab-row,
+  .email-toolbar,
+  .main-content,
+  .hdsearch {
+    position: relative;
+    left: 72px;
+    width: calc(100% - 72px);
+    margin-left: 0;
+  }
+
+  .email-toolbar {
+    padding: 8px 10px;
+  }
+  
+  .tab-row {
+    gap: 8px;
+    justify-content: space-around;
+    padding: 8px 10px;
+  }
+
+  .main-content {
+    padding: 8px 10px;
+    height: calc(100vh - 168px);
+    overflow-y: auto;
+  }
+
+  .tab-item span {
+    display: none;
+  }
+}
